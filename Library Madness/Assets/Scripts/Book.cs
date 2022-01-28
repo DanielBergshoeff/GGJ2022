@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Book : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool Thrown = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void OnCollisionEnter(Collision collision) {
+        if (!Thrown)
+            return;
+
+        if (collision.collider.attachedRigidbody == null) {
+            gameObject.layer = 0;
+            Thrown = false;
+        }
     }
 }
