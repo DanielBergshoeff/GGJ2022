@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: b1f5dd470cfd23849a980faa8a1a5c1a
   - enabled: 1
+    path: Assets/Scenes/Lizzy2.unity
+    guid: 8c78c0033d92577419fca7445db320eb
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TheBestArts.unity
     guid: 55caaad62ef39e94bbf79372113677dc
   m_configObjects: {}
