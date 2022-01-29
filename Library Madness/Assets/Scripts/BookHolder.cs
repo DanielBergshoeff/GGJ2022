@@ -24,14 +24,13 @@ public class BookHolder : MonoBehaviour
         if (!collision.collider.CompareTag("Book"))
             return;
 
-        Book b = collision.collider.GetComponent<Book>();
+        Book b = collision.collider.attachedRigidbody.GetComponent<Book>();
         if (b == null || b.Thrown)
             return;
 
         b.transform.parent = BookParent;
         b.transform.localPosition = transform.up * 0.1f * Books.Count;
-        b.GetComponent<Rigidbody>().isKinematic = true;
-        b.GetComponent<Collider>().enabled = false;
+        b.PickUp();
         Books.Add(b);
     }
 
@@ -49,12 +48,12 @@ public class BookHolder : MonoBehaviour
 
     private void ThrowBook(Vector3 direction) {
         Book b = Books[Books.Count - 1];
-        b.GetComponent<Rigidbody>().isKinematic = false;
-        b.GetComponent<Collider>().enabled = true;
+        b.Drop();
         b.transform.parent = null;
         b.GetComponent<Rigidbody>().AddForce(direction * 500f);
         b.Thrown = true;
         b.gameObject.layer = 8;
+        b.transform.GetChild(0).gameObject.layer = 8;
         Books.Remove(b);
     }
 
