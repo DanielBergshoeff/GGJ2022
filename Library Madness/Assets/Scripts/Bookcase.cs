@@ -7,8 +7,12 @@ public class Bookcase : MonoBehaviour
     public GameObject BookPrefab;
     public Transform SectionsParent;
 
+    public List<AudioClip> EjectSounds;
+    public List<AudioClip> InjectSounds;
+
     private Book[,] bookSpots;
     private List<Transform> Sections;
+    private AudioSource myAudioSource;
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P)){
@@ -31,6 +35,8 @@ public class Bookcase : MonoBehaviour
                 go.GetComponent<Book>().Stored = true;
             }
         }
+
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     public void EjectBook() {
@@ -45,6 +51,8 @@ public class Bookcase : MonoBehaviour
         bookToEject.Stored = false;
         bookToEject.Drop();
         bookToEject.GetComponent<Rigidbody>().AddForce(transform.forward * Random.Range(300f, 600f));
+
+        myAudioSource.PlayOneShot(EjectSounds[Random.Range(0, EjectSounds.Count)]);
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -68,6 +76,7 @@ public class Bookcase : MonoBehaviour
                     b.Stored = true;
                     b.PlayerThrown = false;
                     BookManager.EscapedBooks--;
+                    myAudioSource.PlayOneShot(InjectSounds[Random.Range(0, InjectSounds.Count)]);
                 }
             }
         }
