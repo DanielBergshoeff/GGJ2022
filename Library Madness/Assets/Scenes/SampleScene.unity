@@ -1610,6 +1610,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1482610780}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1506782983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4540677629607283471, guid: 875f47673bffe8b449bffc3f4496e151,
+    type: 3}
+  m_PrefabInstance: {fileID: 4540677629126192059}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1506782984
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506782983}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cfea8e11c2fe2c84091c5aaca2c2c4bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1669358087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,12 +2845,6 @@ PrefabInstance:
       propertyPath: AllButPlayer.m_Bits
       value: 311
       objectReference: {fileID: 0}
-    - target: {fileID: 4540677629607283458, guid: 875f47673bffe8b449bffc3f4496e151,
-        type: 3}
-      propertyPath: RespawnPosition
-      value: 
-      objectReference: {fileID: 11400000, guid: 6de8bf31265cc3c4c972ae4d6bddfb16,
-        type: 2}
     - target: {fileID: 4540677629607283459, guid: 875f47673bffe8b449bffc3f4496e151,
         type: 3}
       propertyPath: m_LocalPosition.x
