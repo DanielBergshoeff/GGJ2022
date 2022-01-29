@@ -27,9 +27,11 @@ public class PlayerController : MonoBehaviour
             move += Vector3.left;
         }
 
-        if (move != Vector3.zero) {
-            transform.position += move.normalized * MoveSpeed * Time.deltaTime;
-            transform.rotation = Quaternion.LookRotation(move);
-        }
+        if (move.sqrMagnitude < 0.01f)
+            return;
+
+        transform.position += move.normalized * MoveSpeed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(move);
+
     }
 }
