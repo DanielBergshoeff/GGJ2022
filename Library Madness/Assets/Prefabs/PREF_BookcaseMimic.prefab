@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5629224607548032903}
   - component: {fileID: 3694081218011659697}
   - component: {fileID: 6951457899181572424}
+  - component: {fileID: 1732575322}
   m_Layer: 0
   m_Name: PREF_BookcaseMimic
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8666152928263746964}
-  m_LocalRotation: {x: -0, y: 0.24121052, z: -0, w: 0.9704729}
+  m_LocalRotation: {x: 0, y: 0.24120983, z: 0, w: 0.970473}
   m_LocalPosition: {x: -4.81, y: -0.000011563301, z: 14.401904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -79,3 +80,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1732575322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666152928263746964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303c994a1d5aba249939e8f60d9bafb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
