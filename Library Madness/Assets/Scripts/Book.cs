@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class Book : MonoBehaviour
 {
     public bool Thrown = false;
+    public bool Stored = false;
+    public bool PlayerThrown = false;
 
     private NavMeshAgent myNavMeshAgent;
     private Rigidbody myRigidbody;
@@ -20,7 +22,8 @@ public class Book : MonoBehaviour
         myCollider = GetComponentInChildren<Collider>();
     }
     private void Start() {
-        SetRandomDestination();
+        if(myNavMeshAgent.enabled)
+            SetRandomDestination();
     }
 
     private void Update() {
@@ -41,6 +44,9 @@ public class Book : MonoBehaviour
     public void Drop() {
         myRigidbody.isKinematic = false;
         myCollider.enabled = true;
+        gameObject.layer = 8;
+        transform.GetChild(0).gameObject.layer = 8;
+        Thrown = true;
     }
 
     private void OnCollisionEnter(Collision collision) {
