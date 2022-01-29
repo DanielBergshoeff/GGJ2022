@@ -7,13 +7,18 @@ public class BookHolder : MonoBehaviour
     public List<Book> Books;
     public Transform BookParent;
 
+    public List<AudioClip> ThrowSounds;
+    public List<AudioClip> PickupSounds;
+
     private bool throwing = false;
     private Vector3 throwStart;
+    private AudioSource myAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         Books = new List<Book>();
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -36,6 +41,7 @@ public class BookHolder : MonoBehaviour
         b.transform.rotation = Quaternion.Euler(0f, b.transform.rotation.eulerAngles.y, 0f);
         b.PickUp();
         Books.Add(b);
+        myAudioSource.PlayOneShot(PickupSounds[Random.Range(0, PickupSounds.Count)]);
     }
 
     private void CheckForThrow() {
@@ -47,6 +53,7 @@ public class BookHolder : MonoBehaviour
             throwDir = new Vector3(throwDir.x * -1f, throwDir.z, -throwDir.y);
             ThrowBook(throwDir.normalized);
             throwing = false;
+            myAudioSource.PlayOneShot(ThrowSounds[Random.Range(0, ThrowSounds.Count)]);
         }
     }
 
