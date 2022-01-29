@@ -41,7 +41,7 @@ public class BookHolder : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0)) {
             Vector3 throwDir = Input.mousePosition - throwStart;
-            throwDir = new Vector3(throwDir.x * -1f, throwDir.y, throwDir.z);
+            throwDir = new Vector3(throwDir.x * -1f, throwDir.z, -throwDir.y);
             ThrowBook(throwDir.normalized);
             throwing = false;
         }
