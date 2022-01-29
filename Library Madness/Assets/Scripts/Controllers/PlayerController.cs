@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float MoveSpeed = 2.0f;
+    public Vector3Variable RespawnPosition;
 
     // Update is called once per frame
     void Update()
     {
         HandleMovement();
+        CheckForRespawn();
     }
 
     private void HandleMovement() {
@@ -32,6 +34,12 @@ public class PlayerController : MonoBehaviour
 
         transform.position += move.normalized * MoveSpeed * Time.deltaTime;
         transform.rotation = Quaternion.LookRotation(move);
+    }
 
+    private void CheckForRespawn() {
+        if (transform.position.y > -10f)
+            return;
+
+        transform.position = RespawnPosition.Value;
     }
 }
