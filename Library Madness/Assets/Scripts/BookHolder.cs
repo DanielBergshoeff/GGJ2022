@@ -24,8 +24,11 @@ public class BookHolder : MonoBehaviour
         if (!collision.collider.CompareTag("Book"))
             return;
 
+        if (collision.collider.attachedRigidbody == null)
+            return;
+
         Book b = collision.collider.attachedRigidbody.GetComponent<Book>();
-        if (b == null || b.Thrown)
+        if (b == null || b.Thrown || b.Stored)
             return;
 
         b.transform.parent = BookParent;
@@ -49,11 +52,9 @@ public class BookHolder : MonoBehaviour
     private void ThrowBook(Vector3 direction) {
         Book b = Books[Books.Count - 1];
         b.Drop();
+        b.PlayerThrown = true;
         b.transform.parent = null;
         b.GetComponent<Rigidbody>().AddForce(direction * 500f);
-        b.Thrown = true;
-        b.gameObject.layer = 8;
-        b.transform.GetChild(0).gameObject.layer = 8;
         Books.Remove(b);
     }
 
