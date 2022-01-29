@@ -161,6 +161,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Books: []
   BookParent: {fileID: 4540677630829932840}
+  ThrowSounds:
+  - {fileID: 8300000, guid: db12c261e6ad01344930371e58ea18f3, type: 3}
+  - {fileID: 8300000, guid: 34b5606a1e0175e47acbf22fd5e6d77a, type: 3}
+  - {fileID: 8300000, guid: 27fad4bb61622284eaa2199fc2c5cfa6, type: 3}
+  PickupSounds:
+  - {fileID: 8300000, guid: 84798690742d2cb4aa728a0a2f725e55, type: 3}
+  - {fileID: 8300000, guid: 6e47e0ac46430254998ab8b94e77f743, type: 3}
+  - {fileID: 8300000, guid: a4ffdb229a9b92f4c87044474dedced2, type: 3}
 --- !u!33 &4540677629607283468
 MeshFilter:
   m_ObjectHideFlags: 0
