@@ -41,6 +41,7 @@ public class Bookcase : MonoBehaviour
         if (!bookToEject.Stored)
             return;
 
+        BookManager.EscapedBooks++;
         bookToEject.Stored = false;
         bookToEject.Drop();
         bookToEject.GetComponent<Rigidbody>().AddForce(transform.forward * Random.Range(300f, 600f));
@@ -66,6 +67,7 @@ public class Bookcase : MonoBehaviour
                     b.PickUp();
                     b.Stored = true;
                     b.PlayerThrown = false;
+                    BookManager.EscapedBooks--;
                 }
             }
         }

@@ -142,6 +142,7 @@ MonoBehaviour:
   Thrown: 0
   Stored: 0
   PlayerThrown: 0
+  SpawnPosition: {fileID: 11400000, guid: 6de8bf31265cc3c4c972ae4d6bddfb16, type: 2}
 --- !u!54 &7896320734599066798
 Rigidbody:
   m_ObjectHideFlags: 0

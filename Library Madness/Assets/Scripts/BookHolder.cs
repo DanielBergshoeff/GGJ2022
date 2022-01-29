@@ -33,6 +33,7 @@ public class BookHolder : MonoBehaviour
 
         b.transform.parent = BookParent;
         b.transform.localPosition = transform.up * 0.1f * Books.Count;
+        b.transform.rotation = Quaternion.Euler(0f, b.transform.rotation.eulerAngles.y, 0f);
         b.PickUp();
         Books.Add(b);
     }

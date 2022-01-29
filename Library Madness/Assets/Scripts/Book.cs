@@ -9,6 +9,8 @@ public class Book : MonoBehaviour
     public bool Stored = false;
     public bool PlayerThrown = false;
 
+    public Vector3Variable SpawnPosition;
+
     private NavMeshAgent myNavMeshAgent;
     private Rigidbody myRigidbody;
     private Collider myCollider;
@@ -27,12 +29,19 @@ public class Book : MonoBehaviour
     }
 
     private void Update() {
+        if (transform.position.y < -10f)
+            Respawn();
+
         if (myNavMeshAgent == null || myNavMeshAgent.enabled == false)
             return;
 
         timer += Time.deltaTime;
         if ((targetPosition - transform.position).sqrMagnitude < 0.1f || timer > 5f)
             SetRandomDestination();
+    }
+
+    private void Respawn() {
+        transform.position = SpawnPosition.Value;
     }
 
     public void PickUp() {
