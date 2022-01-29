@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_MovementGeneral
+  m_Name: MAT_MovementRandom
   m_Shader: {fileID: -6465566751694194690, guid: ae5b6502aa6f74a4abf0928a9350ca6e,
     type: 3}
   m_ShaderKeywords: 
@@ -26,7 +26,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - BOOLEAN_18A10A94: 1
-    - Boolean_1A66F5E5: 0
+    - Boolean_1A66F5E5: 1
     - Boolean_A3498BED: 0
     - Vector1_4A3B0B7D: 1
     - Vector1_4FD1ED32: 1
