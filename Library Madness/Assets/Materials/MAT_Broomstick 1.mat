@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_Broomstick
+  m_Name: MAT_Broomstick 1
   m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
   m_ShaderKeywords: _FADING_ON _FLIPBOOKBLENDING_ON _RECEIVE_SHADOWS_OFF _SOFTPARTICLES_ON
   m_LightmapFlags: 6
@@ -35,7 +35,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: b224f80ef4ff03d40ace47743023cbf2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 049efd79e42c6d040b94500b8c179556, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
