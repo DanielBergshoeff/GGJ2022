@@ -17,11 +17,22 @@ public class Book : MonoBehaviour
     private Vector3 targetPosition;
 
     private float timer = 0f;
+    private Material myMaterial;
+
+    public void SetBookMaterial(float seed) {
+        myMaterial.SetFloat("_DisplacementSeed", seed);
+        myMaterial.SetFloat("_StrengthMultiplier", 1f);
+    }
+
+    public void StopBookMaterial() {
+        myMaterial.SetFloat("_StrengthMultiplier", 0f);
+    }
 
     private void Awake() {
         myNavMeshAgent = GetComponent<NavMeshAgent>();
         myRigidbody = GetComponent<Rigidbody>();
         myCollider = GetComponentInChildren<Collider>();
+        myMaterial = GetComponentInChildren<Renderer>().material;
     }
     private void Start() {
         if(myNavMeshAgent.enabled)
