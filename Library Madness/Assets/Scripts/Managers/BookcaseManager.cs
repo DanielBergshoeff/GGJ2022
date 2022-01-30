@@ -5,6 +5,7 @@ using UnityEngine;
 public class BookcaseManager : MonoBehaviour
 {
     public float TimePerEject = 5f;
+    public float EjectOverTimeMultiplier = 0.01f;
 
     private float ejectTimer = 0f;
     private List<Bookcase> bookCases;
@@ -15,6 +16,7 @@ public class BookcaseManager : MonoBehaviour
 
     private void Update() {
         ejectTimer += Time.deltaTime;
+        TimePerEject = TimePerEject * (1f - EjectOverTimeMultiplier * Time.deltaTime);
         if(ejectTimer >= TimePerEject) {
             EjectRandomBook();
             ejectTimer = 0f;

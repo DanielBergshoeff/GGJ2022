@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float MoveSpeed = 2.0f;
+    public float MoveSpeedMultiplier = 0.01f;
+    public float MaxMoveSpeed = 10f;
     public Vector3Variable RespawnPosition;
 
     private Animator myAnimator;
@@ -18,6 +20,11 @@ public class PlayerController : MonoBehaviour
     {
         HandleMovement();
         CheckForRespawn();
+
+        if (MoveSpeed > MaxMoveSpeed)
+            return;
+
+        MoveSpeed = MoveSpeed * (1f + MoveSpeedMultiplier * Time.deltaTime);
     }
 
     private void HandleMovement() {
