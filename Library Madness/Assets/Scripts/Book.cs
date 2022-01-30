@@ -71,8 +71,9 @@ public class Book : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         if(collision.collider.CompareTag("Floor")) {
-            if (myNavMeshAgent.enabled == false)
+            if (myNavMeshAgent.enabled == false) {
                 myNavMeshAgent.enabled = true;
+            }
         }
 
         if (!Thrown)
