@@ -5,11 +5,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float MoveSpeed = 2.0f;
+    public Vector3Variable RespawnPosition;
+
+    private Animator myAnimator;
+
+    private void Awake() {
+        myAnimator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         HandleMovement();
+        CheckForRespawn();
     }
 
     private void HandleMovement() {
@@ -27,9 +35,20 @@ public class PlayerController : MonoBehaviour
             move += Vector3.left;
         }
 
-        if (move != Vector3.zero) {
-            transform.position += move.normalized * MoveSpeed * Time.deltaTime;
-            transform.rotation = Quaternion.LookRotation(move);
+        if (move.sqrMagnitude < 0.01f) {
+            myAnimator.SetBool("Running", false);
+            return;
         }
+
+        myAnimator.SetBool("Running", true);
+        transform.position += move.normalized * MoveSpeed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(move);
+    }
+
+    private void CheckForRespawn() {
+        if (transform.position.y > -10f)
+            return;
+
+        transform.position = RespawnPosition.Value;
     }
 }
