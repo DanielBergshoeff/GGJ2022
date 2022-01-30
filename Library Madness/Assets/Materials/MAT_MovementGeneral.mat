@@ -50,7 +50,7 @@ Material:
     - Vector1_DDF732D9: 0.4
     - Vector1_E26F6E4C: 30
     - Vector1_F6F5BFB3: 4.65
-    - _DisplacementSeed: 0
+    - _DisplacementSeed: 4.102407
     - _EtchTile: 0
     m_Colors:
     - Color_57ACF856: {r: 1, g: 1, b: 1, a: 0}
