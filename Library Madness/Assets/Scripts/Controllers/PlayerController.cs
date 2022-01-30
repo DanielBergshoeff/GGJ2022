@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(move);
     }
 
+    public void SpeedMultiplier(float multiplier) {
+        MoveSpeed = MoveSpeed * (1f + multiplier);
+    }
+
     private void CheckForRespawn() {
         if (transform.position.y > -10f)
             return;

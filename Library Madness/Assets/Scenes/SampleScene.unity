@@ -1798,6 +1798,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+--- !u!114 &1363518629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1397768309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1352787759861141a56b89b319a2b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1397768309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2442,7 +2454,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimePerEject: 5
-  EjectOverTimeMultiplier: 0.01
+  EjectOverTimeMultiplier: 0
+  Waves:
+  - SelectedBookcases:
+    - {fileID: 1844132768}
+    - {fileID: 1363518629}
+    TimePerEject: 0.5
+    TimeTillWave: 5
+    WaveDuration: 5
+    PostWaveEjectMultiplier: 0.3
+    PlayerSpeedMultiplier: 0.3
+  WaveCount: {fileID: 11400000, guid: bb21e4cd2dd81f1429594894386e6957, type: 2}
+  MultiplyPlayerSpeed: {fileID: 11400000, guid: 8af362a561d98864094d100ce44d3c39,
+    type: 2}
 --- !u!4 &1792282743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6761101919387605150, guid: fcabdd117e33e234fb2de8aece499ca1,
@@ -2548,6 +2572,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2073598107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1844132768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+    type: 3}
+  m_PrefabInstance: {fileID: 332023253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1352787759861141a56b89b319a2b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1882630162
 PrefabInstance:
   m_ObjectHideFlags: 0

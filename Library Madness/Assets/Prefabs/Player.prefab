@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 4540677629607283457}
   - component: {fileID: 5536191166086042404}
   - component: {fileID: 3795015178875887749}
+  - component: {fileID: 5200486314247703190}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -242,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  MoveSpeedMultiplier: 0.005
+  MoveSpeedMultiplier: 0
   MaxMoveSpeed: 10
   RespawnPosition: {fileID: 11400000, guid: 6de8bf31265cc3c4c972ae4d6bddfb16, type: 2}
 --- !u!114 &4540677629607283456
@@ -459,6 +460,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5200486314247703190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4540677629607283471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15cef9ac85820744690c676215a3f080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8af362a561d98864094d100ce44d3c39, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4540677629607283458}
+        m_MethodName: SpeedMultiplier
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4540677630263182587
 GameObject:
   m_ObjectHideFlags: 0
