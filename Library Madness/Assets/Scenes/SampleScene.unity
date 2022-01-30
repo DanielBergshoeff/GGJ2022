@@ -3518,16 +3518,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4540677629607283458, guid: 875f47673bffe8b449bffc3f4496e151,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540677629607283458, guid: 875f47673bffe8b449bffc3f4496e151,
-        type: 3}
-      propertyPath: AllButPlayer.m_Bits
-      value: 311
-      objectReference: {fileID: 0}
     - target: {fileID: 4540677629607283459, guid: 875f47673bffe8b449bffc3f4496e151,
         type: 3}
       propertyPath: m_LocalPosition.x
