@@ -44,13 +44,13 @@ Material:
     - Vector1_8F1F839D: 3.3
     - Vector1_B368902E: 0.05
     - Vector1_B37E7A5C: 1
-    - Vector1_BCEFC529: 1.31
+    - Vector1_BCEFC529: 1
     - Vector1_BD28CF66: 0.69
     - Vector1_DCADC91F: 9.01
     - Vector1_DDF732D9: 0.4
     - Vector1_E26F6E4C: 13.17
     - Vector1_F6F5BFB3: 4
-    - _DisplacementSeed: 0
+    - _DisplacementSeed: 3
     - _EtchTile: 0
     m_Colors:
     - Color_57ACF856: {r: 1, g: 1, b: 1, a: 0}
