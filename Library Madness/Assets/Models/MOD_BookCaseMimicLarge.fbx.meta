@@ -2,13 +2,10 @@ fileFormatVersion: 2
 guid: 3b6d14677c8730741a8b299aa32298f3
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      74: 6372436890393913773
-    second: MOD_BookCaseMimicLarge|MOD_BookCase.005Action
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
-    materialImportMode: 0
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

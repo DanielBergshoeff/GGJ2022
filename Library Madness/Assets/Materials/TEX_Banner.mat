@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TEX_Banner
+  m_Shader: {fileID: -6465566751694194690, guid: ae5b6502aa6f74a4abf0928a9350ca6e,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 176b1b6aeb286814083284817ebb7bab, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_1A66F5E5: 0
+    - Boolean_A3498BED: 0
+    - Vector1_4A3B0B7D: 1
+    - Vector1_4FD1ED32: 1
+    - Vector1_5AA26A91: 0.0005
+    - Vector1_6C90528F: 1
+    - Vector1_70AEB353: 1
+    - Vector1_776C8715: 1
+    - Vector1_7C941B78: 1
+    - Vector1_8F1F839D: 1
+    - Vector1_B368902E: 1
+    - Vector1_B37E7A5C: 1
+    - Vector1_BCEFC529: 1
+    - Vector1_BD28CF66: 0
+    - Vector1_DCADC91F: 1
+    - Vector1_DDF732D9: 1
+    - Vector1_E26F6E4C: 1
+    - Vector1_F6F5BFB3: 4
+    - _DisplacementSeed: 0
+    m_Colors:
+    - Color_57ACF856: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - Color_5DD64B93: {r: 1, g: 1, b: 1, a: 0}
+    - Color_C455E282: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_22FC7DE2: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_4252B2BC: {r: 0, g: 0, b: 0, a: 0}
