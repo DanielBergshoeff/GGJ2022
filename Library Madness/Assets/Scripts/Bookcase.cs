@@ -15,6 +15,7 @@ public class Bookcase : MonoBehaviour
     private AudioSource myAudioSource;
     private float displacementSeed = 0f;
     private Material myMaterial;
+    private int booksPerRow = 7;
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P)){
@@ -29,18 +30,18 @@ public class Bookcase : MonoBehaviour
         }
 
         myMaterial = GetComponent<Renderer>().material;
-        displacementSeed = Random.Range(0f, 15f);
-        myMaterial.SetFloat("_DisplacementSeed", displacementSeed);
-
         myAudioSource = GetComponent<AudioSource>();
     }
 
     private void Start() {
-        bookSpots = new Book[Sections.Count, 8];
+        displacementSeed = Random.Range(0f, 15f);
+        myMaterial.SetFloat("_DisplacementSeed", displacementSeed);
+
+        bookSpots = new Book[Sections.Count, booksPerRow];
         for (int i = 0; i < Sections.Count; i++) {
-            for (int j = 0; j < 8; j++) {
+            for (int j = 0; j < booksPerRow; j++) {
                 GameObject go = Instantiate(BookPrefab, Sections[i]);
-                go.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.225f;
+                go.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.15f;
                 bookSpots[i, j] = go.GetComponent<Book>();
                 go.GetComponent<Book>().Stored = true;
                 go.GetComponent<Book>().SetBookMaterial(displacementSeed);
@@ -50,7 +51,7 @@ public class Bookcase : MonoBehaviour
 
     public void EjectBook() {
         int section = Random.Range(0, Sections.Count);
-        int number = Random.Range(0, 8);
+        int number = Random.Range(0, booksPerRow);
         Book bookToEject = bookSpots[section, number];
 
         if (!bookToEject.Stored)
@@ -61,6 +62,9 @@ public class Bookcase : MonoBehaviour
         bookToEject.Drop();
         bookToEject.GetComponent<Rigidbody>().AddForce(transform.forward * Random.Range(300f, 600f));
         bookToEject.StopBookMaterial();
+
+        bookToEject.transform.Rotate(0f, 0f, -90f);
+        bookToEject.transform.GetChild(0).Rotate(0f, 0f, 90f);
 
         myAudioSource.PlayOneShot(EjectSounds[Random.Range(0, EjectSounds.Count)]);
     }
@@ -78,14 +82,18 @@ public class Bookcase : MonoBehaviour
             return;
 
         for (int i = 0; i < Sections.Count; i++) {
-            for (int j = 0; j < 8; j++) {
+            for (int j = 0; j < booksPerRow; j++) {
                 if (bookSpots[i, j] == b) {
-                    b.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.225f;
-                    b.transform.rotation = BookPrefab.transform.rotation;
+                    b.transform.parent = Sections[i];
+                    b.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.15f;
+                    b.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                    b.transform.GetChild(0).localRotation = Quaternion.Euler(0f, 0f, 0f);
                     b.PickUp();
                     b.Stored = true;
                     b.PlayerThrown = false;
                     b.SetBookMaterial(displacementSeed);
+
+
                     BookManager.EscapedBooks--;
                     myAudioSource.PlayOneShot(InjectSounds[Random.Range(0, InjectSounds.Count)]);
                 }

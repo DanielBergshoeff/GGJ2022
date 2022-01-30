@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - BOOLEAN_18A10A94: 1
     - Boolean_1A66F5E5: 0
-    - Boolean_4A136ECE: 1
+    - Boolean_4A136ECE: 0
     - Boolean_A3498BED: 0
     - Vector1_4A3B0B7D: 1
     - Vector1_4FD1ED32: 1
@@ -50,7 +50,7 @@ Material:
     - Vector1_DDF732D9: 0.4
     - Vector1_E26F6E4C: 30
     - Vector1_F6F5BFB3: 4.65
-    - _DisplacementSeed: 0
+    - _DisplacementSeed: 5
     - _EtchTile: 0
     - _StrengthMultiplier: 1
     m_Colors:
