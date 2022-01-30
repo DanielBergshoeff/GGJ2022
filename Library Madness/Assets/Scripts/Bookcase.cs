@@ -13,6 +13,8 @@ public class Bookcase : MonoBehaviour
     private Book[,] bookSpots;
     private List<Transform> Sections;
     private AudioSource myAudioSource;
+    private float displacementSeed = 0f;
+    private Material myMaterial;
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P)){
@@ -26,17 +28,24 @@ public class Bookcase : MonoBehaviour
             Sections.Add(SectionsParent.GetChild(i));
         }
 
-        bookSpots = new Book[Sections.Count,8];
+        myMaterial = GetComponent<Renderer>().material;
+        displacementSeed = Random.Range(0f, 15f);
+        myMaterial.SetFloat("_DisplacementSeed", displacementSeed);
+
+        myAudioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start() {
+        bookSpots = new Book[Sections.Count, 8];
         for (int i = 0; i < Sections.Count; i++) {
             for (int j = 0; j < 8; j++) {
                 GameObject go = Instantiate(BookPrefab, Sections[i]);
                 go.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.225f;
                 bookSpots[i, j] = go.GetComponent<Book>();
                 go.GetComponent<Book>().Stored = true;
+                go.GetComponent<Book>().SetBookMaterial(displacementSeed);
             }
         }
-
-        myAudioSource = GetComponent<AudioSource>();
     }
 
     public void EjectBook() {
@@ -51,6 +60,7 @@ public class Bookcase : MonoBehaviour
         bookToEject.Stored = false;
         bookToEject.Drop();
         bookToEject.GetComponent<Rigidbody>().AddForce(transform.forward * Random.Range(300f, 600f));
+        bookToEject.StopBookMaterial();
 
         myAudioSource.PlayOneShot(EjectSounds[Random.Range(0, EjectSounds.Count)]);
     }
@@ -75,6 +85,7 @@ public class Bookcase : MonoBehaviour
                     b.PickUp();
                     b.Stored = true;
                     b.PlayerThrown = false;
+                    b.SetBookMaterial(displacementSeed);
                     BookManager.EscapedBooks--;
                     myAudioSource.PlayOneShot(InjectSounds[Random.Range(0, InjectSounds.Count)]);
                 }
