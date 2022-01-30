@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_MovementGeneral
+  m_Name: Etch3
   m_Shader: {fileID: -6465566751694194690, guid: ae5b6502aa6f74a4abf0928a9350ca6e,
     type: 3}
   m_ShaderKeywords: 
@@ -51,8 +51,8 @@ Material:
     - Vector1_E26F6E4C: 30
     - Vector1_F6F5BFB3: 4.65
     - _DisplacementSeed: 5
-    - _EtchTile: 0
-    - _StrengthMultiplier: 0
+    - _EtchTile: 4
+    - _StrengthMultiplier: 1
     m_Colors:
     - Color_57ACF856: {r: 1, g: 1, b: 1, a: 0}
     - Color_5DD64B93: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0}

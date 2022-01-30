@@ -15,7 +15,10 @@ public class Bookcase : MonoBehaviour
     private AudioSource myAudioSource;
     private float displacementSeed = 0f;
     private Material myMaterial;
-    private int booksPerRow = 7;
+
+    public int BooksPerRow = 7;
+    public float HalfBookSize = 0.15f;
+    public float BookThickness = 0.2f;
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.P)){
@@ -37,11 +40,11 @@ public class Bookcase : MonoBehaviour
         displacementSeed = Random.Range(0f, 15f);
         myMaterial.SetFloat("_DisplacementSeed", displacementSeed);
 
-        bookSpots = new Book[Sections.Count, booksPerRow];
+        bookSpots = new Book[Sections.Count, BooksPerRow];
         for (int i = 0; i < Sections.Count; i++) {
-            for (int j = 0; j < booksPerRow; j++) {
+            for (int j = 0; j < BooksPerRow; j++) {
                 GameObject go = Instantiate(BookPrefab, Sections[i]);
-                go.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.15f;
+                go.transform.position = Sections[i].position + transform.right * -BookThickness * j + Vector3.up * HalfBookSize;
                 bookSpots[i, j] = go.GetComponent<Book>();
                 go.GetComponent<Book>().Stored = true;
                 go.GetComponent<Book>().SetBookMaterial(displacementSeed);
@@ -51,7 +54,7 @@ public class Bookcase : MonoBehaviour
 
     public void EjectBook() {
         int section = Random.Range(0, Sections.Count);
-        int number = Random.Range(0, booksPerRow);
+        int number = Random.Range(0, BooksPerRow);
         Book bookToEject = bookSpots[section, number];
 
         if (!bookToEject.Stored)
@@ -82,10 +85,10 @@ public class Bookcase : MonoBehaviour
             return;
 
         for (int i = 0; i < Sections.Count; i++) {
-            for (int j = 0; j < booksPerRow; j++) {
+            for (int j = 0; j < BooksPerRow; j++) {
                 if (bookSpots[i, j] == b) {
                     b.transform.parent = Sections[i];
-                    b.transform.position = Sections[i].position + transform.right * -0.1f * j + Vector3.up * 0.15f;
+                    b.transform.position = Sections[i].position + transform.right * -BookThickness * j + Vector3.up * HalfBookSize;
                     b.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
                     b.transform.GetChild(0).localRotation = Quaternion.Euler(0f, 0f, 0f);
                     b.PickUp();

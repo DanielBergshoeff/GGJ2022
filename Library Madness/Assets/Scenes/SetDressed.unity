@@ -4028,6 +4028,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 5740509993959841979, guid: 3be43639e0064874a8ae3be2d354c568,
+        type: 3}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4098,6 +4111,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1244049bc058264894403c83df46537, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -5019,6 +5037,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3746343232328473879, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 890492912504642640, guid: 098ec8c215ac94f4580f2522052c09a7,
+        type: 3}
+    - target: {fileID: 4194251763085517481, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90a4f0a998e2d149a3ed6ed6660673c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9f6a251ea6c194899ffa4e5bef7fff, type: 3}
 --- !u!4 &323105755 stripped
@@ -8059,6 +8088,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimePerEject: 4
+  EjectOverTimeMultiplier: 0.01
+  Waves: []
+  WaveCount: {fileID: 11400000, guid: bb21e4cd2dd81f1429594894386e6957, type: 2}
+  MultiplyPlayerSpeed: {fileID: 11400000, guid: 8af362a561d98864094d100ce44d3c39,
+    type: 2}
 --- !u!4 &541094117
 Transform:
   m_ObjectHideFlags: 0
@@ -8664,6 +8698,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746343232328473879, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 3803877110465687444, guid: 902472c1202fd854abd5561eafd3c97b,
+        type: 3}
+    - target: {fileID: 4194251763085517481, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b84d89c373898f74db16f732fb230d61, type: 2}
+    - target: {fileID: 6626469758078745885, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9f6a251ea6c194899ffa4e5bef7fff, type: 3}
@@ -9923,8 +9973,16 @@ PrefabInstance:
     - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
       propertyPath: BookPrefab
       value: 
-      objectReference: {fileID: 7896320734599066800, guid: f5d0b316bec5e674290805a06668cd28,
+      objectReference: {fileID: 6488096678932846719, guid: 18ba80f998575af43be2cfa0ef3e441b,
         type: 3}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9995,6 +10053,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c99f1216b63eaa643bfe846c89032db8, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -13474,6 +13537,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13534,6 +13601,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b84d89c373898f74db16f732fb230d61, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -14298,8 +14370,16 @@ PrefabInstance:
     - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
       propertyPath: BookPrefab
       value: 
-      objectReference: {fileID: 7896320734599066800, guid: f5d0b316bec5e674290805a06668cd28,
+      objectReference: {fileID: 3184484341908080333, guid: ff332b0050e950c49943fed38954f50a,
         type: 3}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14370,6 +14450,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1244049bc058264894403c83df46537, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -16207,6 +16292,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 69839424246942776, guid: d7c51660908cb1d4283db910754d9778,
+        type: 3}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16277,6 +16375,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90a4f0a998e2d149a3ed6ed6660673c, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -18092,8 +18195,20 @@ PrefabInstance:
     - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
       propertyPath: BookPrefab
       value: 
-      objectReference: {fileID: 7896320734599066800, guid: f5d0b316bec5e674290805a06668cd28,
+      objectReference: {fileID: 6649313484415534587, guid: c39586d10e9bd3e4098b826b210881fa,
         type: 3}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BooksPerRow
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18164,6 +18279,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b84d89c373898f74db16f732fb230d61, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -20853,6 +20973,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 6163686211199805587, guid: 585a2936b20f9504297e8f37196e0ea1,
+        type: 3}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20923,6 +21056,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 89d1c8c2da66cc748a26c5a128ea7028, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -21623,6 +21761,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3746343232328473879, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 7210932383666203035, guid: 1b9368175a7d60c41a2997a5ac3b52c9,
+        type: 3}
+    - target: {fileID: 4194251763085517481, guid: 8a9f6a251ea6c194899ffa4e5bef7fff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c99f1216b63eaa643bfe846c89032db8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a9f6a251ea6c194899ffa4e5bef7fff, type: 3}
 --- !u!4 &1376221167 stripped
@@ -22380,8 +22529,16 @@ PrefabInstance:
     - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
       propertyPath: BookPrefab
       value: 
-      objectReference: {fileID: 7896320734599066800, guid: f5d0b316bec5e674290805a06668cd28,
+      objectReference: {fileID: 7314428422091321079, guid: 9e0c6ed8dc58a3b43873aa1e1b9c0045,
         type: 3}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: HalfBookSize
+      value: 0.225
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22452,6 +22609,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c99f1216b63eaa643bfe846c89032db8, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
@@ -28821,6 +28983,15 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookPrefab
+      value: 
+      objectReference: {fileID: 4122127995745130091, guid: 17d3a52f37033d3408e6de80e407ce3b,
+        type: 3}
+    - target: {fileID: 2049872536, guid: f40f9eeba231ae2429bcdcd13fb29ebc, type: 3}
+      propertyPath: BookThickness
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5629224607548032903, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28881,6 +29052,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6951457899181572424, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f90a4f0a998e2d149a3ed6ed6660673c, type: 2}
     - target: {fileID: 8666152928263746964, guid: f40f9eeba231ae2429bcdcd13fb29ebc,
         type: 3}
       propertyPath: m_Name
